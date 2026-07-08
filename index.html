@@ -461,6 +461,25 @@
       <p>エールズトラッククラブ | 千葉市周辺の走り方教室・アスリート育成クラブ</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      // スマホ表示のメニュー開閉を行います。
+      const navToggle = document.querySelector(".nav-toggle");
+      const siteNav = document.querySelector(".site-nav");
+
+      if (navToggle && siteNav) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = siteNav.classList.toggle("is-open");
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        // メニュー内リンクを押したら、メニューを閉じます。
+        siteNav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            siteNav.classList.remove("is-open");
+            navToggle.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+    </script>
   </body>
 </html>
