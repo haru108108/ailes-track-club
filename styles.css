@@ -758,6 +758,71 @@ h3 {
   font-weight: 800;
 }
 
+.place-section {
+  width: min(var(--max-width), calc(100% - 36px));
+}
+
+.venue-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.venue-card {
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--blue);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.venue-card span {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 4px 10px;
+  color: #8a4300;
+  font-size: 0.8rem;
+  font-weight: 900;
+  background: #ffe2c2;
+  border-radius: 999px;
+}
+
+.venue-card h3 {
+  color: var(--blue-dark);
+}
+
+.venue-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.area-online {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  align-items: center;
+  margin-top: 22px;
+  padding: 24px;
+  background: var(--blue-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.area-online h3 {
+  color: var(--blue-dark);
+}
+
+.area-online p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.weather-panel {
+  margin-top: 18px;
+}
+
 .split,
 .coach {
   display: grid;
@@ -935,6 +1000,7 @@ h3 {
   .course-grid,
   .price-grid,
   .online-grid,
+  .venue-grid,
   .note-grid,
   .coach-record ul,
   .split,
@@ -944,7 +1010,8 @@ h3 {
 
   .price-banner,
   .personal-price,
-  .online-cta {
+  .online-cta,
+  .area-online {
     grid-template-columns: 1fr;
   }
 
@@ -992,7 +1059,9 @@ h3 {
   .price-notes,
   .online-card,
   .online-notes,
-  .online-cta {
+  .online-cta,
+  .venue-card,
+  .area-online {
     padding: 20px;
   }
 
